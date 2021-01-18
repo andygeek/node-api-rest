@@ -1,4 +1,9 @@
-// Mostrar una oración cada medio minuto
-setInterval(() => {
-    console.log('Hola mundo')
-}, 500)
+// Servidor básico
+const http = require('http')
+const server = http.createServer((req, res) => {
+    console.log(req.url)
+    res.end()
+})
+
+server.listen(3002)
+console.log('Escuchando en el puerto 3002')
